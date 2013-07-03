@@ -16,9 +16,10 @@
 		6215564C17831211009FC5DC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6215564B17831211009FC5DC /* Default.png */; };
 		6215564E17831211009FC5DC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6215564D17831211009FC5DC /* Default@2x.png */; };
 		6215565017831211009FC5DC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6215564F17831211009FC5DC /* Default-568h@2x.png */; };
-		6215566017831251009FC5DC /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6215565F17831251009FC5DC /* MainViewController.m */; };
+		6215566017831251009FC5DC /* MainViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6215565F17831251009FC5DC /* MainViewController.mm */; };
 		621556641783152B009FC5DC /* MonaLisaLa.png in Resources */ = {isa = PBXBuildFile; fileRef = 621556631783152B009FC5DC /* MonaLisaLa.png */; };
 		62155666178315A4009FC5DC /* MonaLisaLa@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62155665178315A4009FC5DC /* MonaLisaLa@2x.png */; };
+		9564257B1783C6CF00F2AF12 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9564257A1783C6CF00F2AF12 /* opencv2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,9 +37,10 @@
 		6215564D17831211009FC5DC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		6215564F17831211009FC5DC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		6215565E17831251009FC5DC /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		6215565F17831251009FC5DC /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		6215565F17831251009FC5DC /* MainViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainViewController.mm; sourceTree = "<group>"; };
 		621556631783152B009FC5DC /* MonaLisaLa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MonaLisaLa.png; path = ../../../asset/image/MonaLisaLa.png; sourceTree = "<group>"; };
 		62155665178315A4009FC5DC /* MonaLisaLa@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MonaLisaLa@2x.png"; path = "../../../asset/image/MonaLisaLa@2x.png"; sourceTree = "<group>"; };
+		9564257A1783C6CF00F2AF12 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../../../iOSOpenCVStady/asset/libs/ios/opencv2.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 				6215563A17831211009FC5DC /* UIKit.framework in Frameworks */,
 				6215563C17831211009FC5DC /* Foundation.framework in Frameworks */,
 				6215563E17831211009FC5DC /* CoreGraphics.framework in Frameworks */,
+				9564257B1783C6CF00F2AF12 /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +78,7 @@
 		6215563817831211009FC5DC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9564257A1783C6CF00F2AF12 /* opencv2.framework */,
 				6215563917831211009FC5DC /* UIKit.framework */,
 				6215563B17831211009FC5DC /* Foundation.framework */,
 				6215563D17831211009FC5DC /* CoreGraphics.framework */,
@@ -120,7 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				6215565E17831251009FC5DC /* MainViewController.h */,
-				6215565F17831251009FC5DC /* MainViewController.m */,
+				6215565F17831251009FC5DC /* MainViewController.mm */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -211,7 +215,7 @@
 			files = (
 				6215564617831211009FC5DC /* main.m in Sources */,
 				6215564A17831211009FC5DC /* AppDelegate.m in Sources */,
-				6215566017831251009FC5DC /* MainViewController.m in Sources */,
+				6215566017831251009FC5DC /* MainViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +292,10 @@
 		6215565417831211009FC5DC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../iOSOpenCVStady/asset/libs/ios\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MethodTest/MethodTest-Prefix.pch";
 				INFOPLIST_FILE = "MethodTest/MethodTest-Info.plist";
@@ -300,6 +308,10 @@
 		6215565517831211009FC5DC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../iOSOpenCVStady/asset/libs/ios\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MethodTest/MethodTest-Prefix.pch";
 				INFOPLIST_FILE = "MethodTest/MethodTest-Info.plist";
@@ -328,6 +340,7 @@
 				6215565517831211009FC5DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
